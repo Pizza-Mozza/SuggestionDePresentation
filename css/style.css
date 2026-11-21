@@ -1,0 +1,628 @@
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --pink: #fd2580;
+    --pink-dark: #e91670;
+    --dark: #17151a;
+    --grey: #777;
+    --light: #fff5f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: #222;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: var(--pink);
+    padding: 17px 0;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.navbar-brand span {
+    color: var(--dark);
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 600;
+    margin-left: 18px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-pink {
+    background: var(--pink);
+    color: white;
+    border: 2px solid var(--pink);
+    border-radius: 5px;
+    padding: 11px 24px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-pink:hover {
+    background: var(--pink-dark);
+    border-color: var(--pink-dark);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    border-radius: 5px;
+    padding: 11px 24px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+    position: relative;
+
+    background-image: url("https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    padding: 120px 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(20, 10, 25, 0.78),
+        rgba(20, 10, 25, 0.62)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    display: inline-block;
+    color: var(--pink);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--pink);
+}
+
+.hero p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    opacity: 0.7;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 110px 0;
+}
+
+.section-tag {
+    display: block;
+    color: var(--pink);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+}
+
+.section h2 span {
+    color: var(--pink);
+}
+
+.section-description {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.text-secondary {
+    line-height: 1.9;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--pink);
+    font-weight: 800;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    color: var(--pink-dark);
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   ABOUT IMAGE
+========================= */
+
+.about-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.about-image:hover img {
+    transform: scale(1.04);
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.image-caption span {
+    color: var(--pink);
+    margin-right: 12px;
+}
+
+
+/* =========================
+   ACTIVITIES
+========================= */
+
+.activities-section {
+    background: var(--light);
+}
+
+.section-heading {
+    max-width: 700px;
+}
+
+.section-heading p {
+    color: var(--grey);
+    font-size: 1.05rem;
+}
+
+.activity-card {
+    height: 100%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(253,37,128,0.13);
+}
+
+.activity-image {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.activity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.activity-card:hover img {
+    transform: scale(1.07);
+}
+
+.activity-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--pink);
+    color: white;
+    padding: 8px 13px;
+    font-weight: 800;
+    border-radius: 3px;
+}
+
+.activity-content {
+    padding: 25px;
+}
+
+.activity-category {
+    color: var(--pink);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.activity-content h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.activity-content p {
+    color: var(--grey);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-section {
+    background: var(--pink);
+    color: white;
+    padding: 75px 20px;
+}
+
+.quote-section span {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    font-weight: 800;
+}
+
+.quote-section h2 {
+    font-size: clamp(1.7rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+
+/* =========================
+   TEAM
+========================= */
+
+.team-card {
+    padding: 35px;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 7px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    border-color: var(--pink);
+    transform: translateY(-5px);
+}
+
+.team-icon {
+    width: 55px;
+    height: 55px;
+    background: var(--light);
+    color: var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.team-role {
+    color: var(--pink);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.team-card h4 {
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.team-card p {
+    color: var(--grey);
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    background: var(--light);
+}
+
+.contact-section p {
+    color: var(--grey);
+    line-height: 1.9;
+}
+
+.contact-decoration {
+    margin-top: 35px;
+    color: var(--pink);
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+}
+
+.contact-card {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+}
+
+.contact-card h3 {
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.contact-card form {
+    margin-top: 25px;
+}
+
+.contact-card label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    padding: 13px 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 3px rgba(253,37,128,0.1);
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 55px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-bottom: 35px;
+}
+
+.footer-brand {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.footer-brand span {
+    color: var(--pink);
+}
+
+.footer-content p {
+    color: #aaa;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.footer-right {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-right a {
+    color: white;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-right a:hover {
+    color: var(--pink);
+}
+
+.footer-bottom {
+    border-top: 1px solid #38343b;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #999;
+    font-size: 0.8rem;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .hero-label {
+        letter-spacing: 2px;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .contact-card {
+        padding: 25px;
+    }
+
+    .footer-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
